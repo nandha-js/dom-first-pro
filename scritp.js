@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var form = document.createElement('form');
     form.id = 'userForm';
 
-    var fields = [
+    var value = [
         { label: 'First Name', id: 'firstname', type: 'text', required: '' },
         { label: 'Middle Name', id: 'middlename', type: 'text', required: '' },
         { label: 'Last Name', id: 'lastname', type: 'text', required: '' },
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { label: 'Password', id: 'password', type: 'password', required: '' }
     ];
 
-    fields.forEach(function(field) {
+    value.forEach(function(field) {
         var fieldContainer = document.createElement('div');
 
         var label = document.createElement('label');
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
 
         var output = '';
-        fields.forEach(function(field) {
+        value.forEach(function(field) {
             var value = document.getElementById(field.id).value;
             output += field.label + ': ' + value + '\n';
         });
